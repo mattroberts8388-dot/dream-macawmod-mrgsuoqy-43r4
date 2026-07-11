@@ -108,6 +108,11 @@ public class MacawEntity extends TameableShoulderEntity {
         return !this.isLeashed();
     }
 
+    @Override
+    public World getWorld() {
+        return super.getWorld();
+    }
+
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
