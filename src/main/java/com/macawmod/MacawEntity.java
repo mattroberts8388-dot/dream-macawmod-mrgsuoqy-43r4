@@ -87,21 +87,6 @@ public class MacawEntity extends TameableShoulderEntity {
         return super.interactMob(player, hand);
     }
 
-    private boolean mountOnto(net.minecraft.server.network.ServerPlayerEntity player) {
-        net.minecraft.nbt.NbtCompound nbt = new net.minecraft.nbt.NbtCompound();
-        nbt.putString("id", this.getSavedEntityId());
-        this.writeNbt(nbt);
-        if (player.addShoulderEntity(nbt)) {
-            this.discard();
-            return true;
-        }
-        return false;
-    }
-
-    private String getSavedEntityId() {
-        return net.minecraft.registry.Registries.ENTITY_TYPE.getId(this.getType()).toString();
-    }
-
     @Override
     public boolean isBreedingItem(ItemStack stack) {
         return this.isTamingFood(stack);
