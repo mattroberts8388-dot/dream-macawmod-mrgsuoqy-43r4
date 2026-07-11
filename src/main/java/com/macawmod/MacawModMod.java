@@ -9,7 +9,6 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.util.math.BlockPos;
 
 public class MacawModMod implements ModInitializer {
     public static final String MOD_ID = "macawmod";
